@@ -2,7 +2,7 @@ services:
   - type: web
     name: school-management-api
     env: docker
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./Dockerfile.simple
     dockerContext: .
     plan: starter
     region: oregon
