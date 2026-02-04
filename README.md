@@ -217,6 +217,31 @@ php artisan test --filter StudentApiTest
 6. **Soft Deletes**: Only applied to students for data retention
 7. **Authentication**: Token-based (suitable for API-first architecture)
 
+## Deployment
+
+### Docker Deployment (Render, Railway, etc.)
+
+The project includes Docker configuration for easy deployment to cloud platforms:
+
+**Quick Deploy to Render:**
+1. Push code to GitHub
+2. Connect repository to [Render](https://render.com)
+3. Render auto-detects `render.yaml` and deploys
+
+**Files included:**
+- `Dockerfile.render` - Optimized production Dockerfile
+- `render.yaml` - Render service configuration
+- `docker-compose.yml` - Local development
+- `DEPLOYMENT.md` - Detailed deployment guide
+
+**Test locally:**
+```bash
+./scripts/build.sh
+docker run -p 8000:80 school-management-api:latest
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
 ## Future Enhancements
 
 - **Caching**: Redis integration for school details and class lists
