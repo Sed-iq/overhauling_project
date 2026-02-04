@@ -1,7 +1,7 @@
 FROM php:8.2-fpm
 
 # Creating database
-RUN touch /var/www/database/database.sqlite
+# RUN touch /var/www/database/database.sqlite
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
