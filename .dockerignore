@@ -4,7 +4,6 @@
 /storage/*.key
 .env
 .env.backup
-.env.production
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
@@ -19,3 +18,5 @@ yarn-error.log
 .gitignore
 README.md
 docker-compose.yml
+TROUBLESHOOTING.md
+DEPLOYMENT.md

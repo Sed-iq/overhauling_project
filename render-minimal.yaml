@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: school-management-api
+    env: docker
+    dockerfilePath: ./Dockerfile.minimal
+    dockerContext: .
+    plan: starter
+    region: oregon
+    branch: main
+    healthCheckPath: /api/documentation
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        generateValue: true
+      - key: APP_URL
+        value: https://school-management-api.onrender.com
